@@ -218,7 +218,7 @@
         app:layout_constraintVertical_bias="0.721" />
 
     <TextView
-        android:id="@+id/stackValTextStack"
+        android:id="@+id/stackValText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stack"
