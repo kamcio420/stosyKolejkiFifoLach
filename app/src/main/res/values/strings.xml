@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">stosyKolejkiFifoLach</string>
+    <string name="kolejka_fifo">Kolejka(FIFO)</string>
+    <string name="stos_lifo">Stos(LIFO)</string>
+    <string name="empty">Empty</string>
+    <string name="wprowadz_liczbe">Wprowadz liczbe</string>
+    <string name="dodaj_element">Dodaj element</string>
+    <string name="stack">[]</string>
+    <string name="usun_element">usun element</string>
+    <string name="enter_integer_value">Enter integer value</string>
+    <string name="add_element">add element</string>
+    <string name="remove_element">remove element</string>
+    <string name="last_element">last element</string>
+    <string name="queue_fifo">Queue(FIFO)</string>
+    <string name="stack_lifo">Stack(LIFO)</string>
+    <string name="size_of_stack">size of stack</string>
+    <string name="is_empty">Is empty</string>
 </resources>
