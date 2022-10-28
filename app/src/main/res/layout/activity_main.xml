@@ -7,8 +7,21 @@
     android:background="@drawable/bcg"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/outputTextQueue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_queue"
+        android:textColor="#C62828"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
     <Button
-        android:id="@+id/topButton"
+        android:id="@+id/topButtonStack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/last_element"
@@ -17,10 +30,23 @@
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.228"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/sizeButton"
+        android:id="@+id/topButtonQueue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_element"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721" />
+
+    <Button
+        android:id="@+id/sizeButtonStack"
         android:layout_width="147dp"
         android:layout_height="61dp"
         android:text="@string/size_of_stack"
@@ -29,10 +55,23 @@
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.311"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/emptyButton"
+        android:id="@+id/sizeButtonQueue"
+        android:layout_width="147dp"
+        android:layout_height="61dp"
+        android:text="@string/size_of_stack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
+    <Button
+        android:id="@+id/emptyButtonStack"
         android:layout_width="146dp"
         android:layout_height="51dp"
         android:text="@string/is_empty"
@@ -41,10 +80,23 @@
         app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.395"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/popButton"
+        android:id="@+id/emptyButtonQueue"
+        android:layout_width="146dp"
+        android:layout_height="51dp"
+        android:text="@string/is_empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/popButtonStack"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:text="@string/remove_element"
@@ -53,10 +105,23 @@
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.311"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/popButtonQueue"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="@string/remove_element"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/headerQueue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/queue_fifo"
@@ -86,48 +151,49 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/outputText"
+        android:id="@+id/outputTextStack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/empty"
         android:textColor="#D50000"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/headerQueue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerStack"
         app:layout_constraintVertical_bias="0.065" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputText"
+        android:id="@+id/inputTextStack"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/headerQueue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outputText"
+        app:layout_constraintTop_toBottomOf="@+id/outputTextStack"
         app:layout_constraintVertical_bias="0.21">
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input"
+        android:id="@+id/inputStack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_integer_value"
         android:minHeight="48dp"
         android:textColor="#F44336"
         android:textColorHint="#D32F2F"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/headerQueue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outputText"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintTop_toBottomOf="@+id/outputTextStack"
+        app:layout_constraintVertical_bias="0.127"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/addButtonStack"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:text="@string/add_element"
@@ -136,10 +202,23 @@
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.228"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/addButtonQueue"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:text="@string/add_element"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.721" />
 
     <TextView
-        android:id="@+id/stackValText"
+        android:id="@+id/stackValTextStack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stack"
@@ -150,4 +229,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/queueValText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stack"
+        android:textColor="#C62828"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTextQueue"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerQueue"
+        app:layout_constraintVertical_bias="0.234">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputQueue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_integer_value"
+        android:minHeight="48dp"
+        android:textColorHint="#C62828"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerQueue"
+        app:layout_constraintVertical_bias="0.208" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
