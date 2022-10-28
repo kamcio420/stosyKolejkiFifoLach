@@ -238,6 +238,7 @@
         android:hint="@string/enter_integer_value"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColor="#F44336"
         android:textColorHint="#C62828"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
